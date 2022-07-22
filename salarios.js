@@ -22,6 +22,40 @@ colombia.push({
 
 colombia.push({
   name: "aida",
+  salary: 500000,
+});
+colombia.push({
+  name: "jorge",
+  salary: 100,
+});
+
+colombia.push({
+  name: "marcos",
+  salary: 200,
+});
+
+colombia.push({
+  name: "ana",
+  salary: 70000,
+});
+
+colombia.push({
+  name: "santi",
+  salary: 90000,
+});
+
+colombia.push({
+  name: "willian",
+  salary: 200,
+});
+
+colombia.push({
+  name: "daniel",
+  salary: 100000000,
+});
+
+colombia.push({
+  name: "mike",
   salary: 100000000,
 });
 
@@ -68,6 +102,11 @@ const medianaGeneralCol = medianaSalarial(salariosColSorted);
 
 //Mediana del Top 10%
 
-const salariosColTop10 = salariosColSorted.splice();
+const splaceStart = (salariosColSorted.length * 90) / 100;
+const splaceCount = salariosColSorted.length - splaceStart;
 
-console.log(medianaGeneralCol);
+const salariosColTop10 = salariosColSorted.splice(splaceStart, splaceCount);
+
+const medinaTop10Col = medianaSalarial(salariosColTop10);
+
+console.log(medianaGeneralCol, medinaTop10Col);
